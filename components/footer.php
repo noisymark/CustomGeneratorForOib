@@ -1,0 +1,1 @@
+<div class="text-center footer-text"><hr> &copy; <?php echo date('Y'); ?> Marko Pavlović</div>
