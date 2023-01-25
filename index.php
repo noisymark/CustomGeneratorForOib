@@ -13,7 +13,7 @@
         <div class="row">
             <div id="lijevidio" class="col-sm-12 col-md-6 col-xl-6 text-center">
             <form action="">
-                <label class="" for="Unos">How many OIBs would you like to generate?</label>
+                <label class="h4" for="Unos">How many OIBs would you like to generate?</label>
                 <br>
                 <input type="text" name="Unos" id="Unos">
                 <input class="bg-success text-white" type="button" value="Generate">
@@ -21,7 +21,11 @@
             </div>
             <div id="desnidio" class="col-sm-12 col-md-6 col-xl-6 text-center">
                 <div class="container">
-                    <h4>Hello</h4>
+                    <h3>Results:</h3>
+                    <div id="desnopolje" class="container bg-white text-black">
+                    <h4>Generated OIBs go here</h4>
+                    <h4>Every new OIB in new line</h4>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-xl-6">
