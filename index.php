@@ -4,13 +4,14 @@ require_once 'components/generator.php';
 if($_SERVER['REQUEST_METHOD']==='POST'){
     $text1 = '';
     $text2 = '';
+    $text3 = '';
     $input = $_POST['Unos'];
     $array=[];
     $pb=[];
     $rb='';
     $output=[];
     if ((int)$input===0){
-        $text3 = 'PLEASE ENTER CORRECT VALUE';
+        $text3 = 'PLEASE ENTER CORRECT VALUE !';
         $text1 = 'Generated OIB goes here';
         $text2 = 'Every OIB in new line';
     }else{
@@ -36,7 +37,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     </div>
     <div class="container">
         <div class="row">
-            <h4 style="text-align:center;"><?=$text3?></h4>
+            <h4 class="bg-danger" id="warningtext" style="text-align:center;"><?=$text3?></h4>
             <div id="lijevidio" class="col-sm-12 col-md-6 col-xl-6 text-center">
             <form method="POST" action="<?=$_SERVER['PHP_SELF']?>">
                 <label class="h4" for="Unos">How many OIBs would you like to generate?</label>
