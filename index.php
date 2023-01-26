@@ -1,4 +1,6 @@
 <?php
+
+require_once 'components/generator.php';
 if($_SERVER['REQUEST_METHOD']==='POST'){
     $text1 = '';
     $text2 = '';
@@ -9,58 +11,17 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     $output=[];
     if ((int)$input===0){
         $text3 = 'PLEASE ENTER CORRECT VALUE';
-        $text1 = '';
-        $text2 = '';
+        $text1 = 'Generated OIB goes here';
+        $text2 = 'Every OIB in new line';
     }else{
-        $text1='';
-        $oib='';
-        $text2='';
-        $text3='';
-        $randarr=[];
-        $output=[];
-        for($i=0;$i<=((int)$input);){
-            $randarr=[];
-            $rb='';
-            $partoib='';
-            for($i=0;$i<10;$i++){
-                $rb=rand(0,9);
-                array_push($randarr,$rb);
-            }
-            $partoib=implode('',$randarr);
-
-            $a = 10;
-
-	        for ($i = 0; $i < 10; $i++) {
-
-		        $a += (int)$partoib[$i];
-		        $a %= 10;
-
-		        if ( $a == 0 ) { $a = 10; }
-
-		        $a *= 2;
-		        $a %= 11;
-
-	        }
-            
-
-	$kontrolni = 11 - $a;
-
-	if ( $kontrolni == 10 ) { $kontrolni = 0; }
-
-    $oib.=$partoib . $kontrolni;
-
-    array_push($output, $oib);
-
-    echo '<pre>';
-    print_r ($output);
-    echo '</pre>';
-
-    $i++;
-}   
+        for($i=0;$i<((int)$input);$i++){
+            $output=[GenerateOIB()];
+            $text1 .= implode('<br>',$output) . '<br>';
+        }
 }
 } else{
-    $text1 = '';
-    $text2 = '';
+    $text1 = 'Generated OIB goes here';
+    $text2 = 'Every OIB in new line';
     $text3 = '';
 }
 
@@ -85,16 +46,13 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
             </form>
             </div>
             <div id="desnidio" class="col-sm-12 col-md-6 col-xl-6 text-center">
-                <div class="container">
+                <div class="container col-sm-9 col-md-6 col-xl-5">
                     <h3>Results:</h3>
                     <div id="desnopolje" class="container bg-white text-black">
                     <h4><?=$text1?></h4>
                     <h4><?=$text2?></h4>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-xl-6">
-                
             </div>
         </div>
         <?php include_once "components/footer.php";?>
