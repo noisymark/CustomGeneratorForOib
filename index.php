@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
             <form method="POST" action="<?=$_SERVER['PHP_SELF']?>">
                 <label class="h4" for="Unos">How many OIBs would you like to generate?</label>
                 <br>
-                <input type="text" name="Unos" id="Unos">
+                <input type="text" name="Unos" id="Unos" autofocus>
                 <input class="bg-success text-white" type="submit" value="Generate">
             </form>
             </div>
