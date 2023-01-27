@@ -31,6 +31,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     $text1 = 'Generated OIB goes here';
     $text3 = '';
     $ima = false;
+    $option='newline';
 }
 
 ?>

@@ -4,7 +4,7 @@ font-family: 'Dosis', sans-serif;
 background: #C33764;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-overflow-x:hidden;
+overflow-x: hidden;
 overflow-y: auto;
 color:white;
 }
@@ -80,9 +80,11 @@ color:white;
 }
 
 #copy{
-    height: 50px;
-    width: 150px;
     border-radius: 15px;
     border: 1px solid black;
     font-size: 1.2rem;
+}
+
+#outputtext{
+    text-decoration: none;
 }
