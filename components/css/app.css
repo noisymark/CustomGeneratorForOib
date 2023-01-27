@@ -14,9 +14,8 @@ color:white;
     padding-bottom: 16px;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
 }
-#lijevidio{
+.row #lijevidio{
     margin: auto;
-    margin-top: 5%
 }
 #lijevidio form{
     margin: 10%;
@@ -37,16 +36,17 @@ color:white;
     border: 1px solid white;
 }
 
-#desnidio{
+#desnidio .container{
     margin: auto;
-}
-
-.container{
-    margin: 10% auto;
 }
 
 #desnidio .container{
    padding:5px;
+}
+
+#desnopolje{
+    max-width: fit-content;
+    word-wrap: break-word;
 }
 
 #desnopolje{
@@ -61,4 +61,28 @@ color:white;
 
 #warningtext{
     margin-top: 20px;
+}
+
+#field{
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+#lijevidio #button{
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    font-size: 1.2rem;
+}
+
+#lijevidio form #input1{
+    margin-bottom: 40px;
+}
+
+#copy{
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    border: 1px solid black;
+    font-size: 1.2rem;
 }
